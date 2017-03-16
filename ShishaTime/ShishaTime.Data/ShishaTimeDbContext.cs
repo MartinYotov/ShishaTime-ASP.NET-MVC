@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using ShishaTime.Data.Contracts;
 using ShishaTime.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;

@@ -57,9 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IShishaTimeDbContext.cs" />
+    <Compile Include="Contracts\IEntityFrameworkRepository.cs" />
+    <Compile Include="Contracts\IShishaTimeData.cs" />
+    <Compile Include="Contracts\IShishaTimeDbContext.cs" />
+    <Compile Include="EntityFrameworkRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShishaTimeData.cs" />
     <Compile Include="ShishaTimeDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +76,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

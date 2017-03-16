@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShishaTime.Data
+namespace ShishaTime.Data.Contracts
 {
     public interface IShishaTimeDbContext
     {
