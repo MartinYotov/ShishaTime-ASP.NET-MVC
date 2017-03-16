@@ -190,6 +190,7 @@
     <Content Include="Images\home-image.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -247,6 +248,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShishaTime.Data\ShishaTime.Data.csproj">
+      <Project>{3e528a85-c38a-4be9-9104-b991d5827903}</Project>
+      <Name>ShishaTime.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShishaTime.Models\ShishaTime.Models.csproj">
+      <Project>{e8ea57a1-bf34-4128-be0b-1b89b0b2e4e2}</Project>
+      <Name>ShishaTime.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShishaTime.Services\ShishaTime.Services.csproj">
+      <Project>{778b39f8-3e5f-4eb1-bee4-36ac93fc8b23}</Project>
+      <Name>ShishaTime.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
