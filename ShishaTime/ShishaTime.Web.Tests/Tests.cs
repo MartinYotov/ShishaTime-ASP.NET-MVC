@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdsHub.Web.Tests
+namespace ShishaTime.Web.Tests
 {
     [TestFixture]
     public class Tests

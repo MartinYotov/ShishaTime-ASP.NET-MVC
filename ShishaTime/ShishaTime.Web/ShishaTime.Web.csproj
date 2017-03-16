@@ -254,6 +254,10 @@
       <Project>{3e528a85-c38a-4be9-9104-b991d5827903}</Project>
       <Name>ShishaTime.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShishaTime.Identity\ShishaTime.Identity.csproj">
+      <Project>{5E32A1D6-4904-47CC-BF7B-DB70C2AAD694}</Project>
+      <Name>ShishaTime.Identity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShishaTime.Models\ShishaTime.Models.csproj">
       <Project>{e8ea57a1-bf34-4128-be0b-1b89b0b2e4e2}</Project>
       <Name>ShishaTime.Models</Name>

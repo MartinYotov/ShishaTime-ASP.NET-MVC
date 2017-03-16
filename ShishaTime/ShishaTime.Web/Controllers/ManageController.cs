@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ShishaTime.Web.Models;
+using ShishaTime.Identity;
 
 namespace ShishaTime.Web.Controllers
 {
