@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.home-image{
+    height: 400px;
+    background-size:cover;
+    background-image: url('../Images/home-image.png');
+    background-repeat: no-repeat;
+}
