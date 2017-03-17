@@ -8,8 +8,5 @@ namespace ShishaTime.Data.Tests.EntityFrameworkRepositoryTests.Mocks
 {
     public class MockedModel
     {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
     }
 }
