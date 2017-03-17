@@ -26,7 +26,6 @@ namespace ShishaTime.Data
             return new ShishaTimeDbContext();
         }
 
-        // TODO: deicide how to implement method
         IDbSet<T> IShishaTimeDbContext.Set<T>()
         {
             return base.Set<T>();
@@ -34,8 +33,6 @@ namespace ShishaTime.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<ShishaBar>().HasMany(x => x.Ratings);
-            //modelBuilder.Entity<Rating>().
             modelBuilder.Entity<User>().HasMany(x => x.FavouriteBars).WithMany(x => x.UsersWhoFollowed);
 
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
