@@ -15,9 +15,9 @@ namespace ShishaTime.Services
             return Mapper.Map<T>(source);
         }
 
-        public TDestination Map<TSource, TDestination>(TSource source, TDestination destination)
+        public TDestination Map<TSource, TDestination>(TSource source)
         {
-            return Mapper.Map<TSource, TDestination>(source, destination);
+            return Mapper.Map<TSource, TDestination>(source);
         }
     }
 }

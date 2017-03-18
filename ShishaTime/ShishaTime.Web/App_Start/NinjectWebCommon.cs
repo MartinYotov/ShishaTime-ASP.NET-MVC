@@ -63,6 +63,7 @@ namespace ShishaTime.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Load(new DataNinjectModule());
+            kernel.Load(new ServicesNinjectModule());
         }        
     }
 }
