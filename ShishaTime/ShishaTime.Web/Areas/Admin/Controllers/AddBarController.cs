@@ -2,15 +2,13 @@
 using ShishaTime.Common.Attributes;
 using ShishaTime.Models;
 using ShishaTime.Services.Contracts;
-using ShishaTime.Web.Models;
-using System;
-using System.Collections.Generic;
+using ShishaTime.Web.Areas.Admin.Models;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ShishaTime.Web.Controllers
+namespace ShishaTime.Web.Areas.Admin.Controllers
 {
     [MyAuthorize(Roles = "Admin")]
     public class AddBarController : Controller
