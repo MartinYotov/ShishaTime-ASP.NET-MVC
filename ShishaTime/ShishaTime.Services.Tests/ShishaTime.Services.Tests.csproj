@@ -52,10 +52,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarsServiceTests\AddBar_Should.cs" />
+    <Compile Include="BarsServiceTests\Constructor_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionsServiceTests\Constructor_Should.cs" />
+    <Compile Include="RegionsServiceTests\GetAllRegions_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ShishaTime.Data\ShishaTime.Data.csproj">
+      <Project>{3E528A85-C38A-4BE9-9104-B991D5827903}</Project>
+      <Name>ShishaTime.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShishaTime.Models\ShishaTime.Models.csproj">
+      <Project>{E8EA57A1-BF34-4128-BE0B-1B89B0B2E4E2}</Project>
+      <Name>ShishaTime.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShishaTime.Services\ShishaTime.Services.csproj">
+      <Project>{778B39F8-3E5F-4EB1-BEE4-36AC93FC8B23}</Project>
+      <Name>ShishaTime.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

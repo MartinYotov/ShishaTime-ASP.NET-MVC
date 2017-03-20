@@ -12,6 +12,11 @@ namespace ShishaTime.Services
 
         public BarsService(IShishaTimeData data)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("Data cannot be null.");
+            }
+
             this.data = data;
         }
 
