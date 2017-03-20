@@ -273,8 +273,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Areas\Admin\Views\AddBar\Index.cshtml" />
-    <Content Include="Views\ErrorPages\Page403.cshtml" />
+    <Content Include="Views\ErrorPages\Page401.cshtml" />
     <Content Include="Views\Shared\_AdminPartial.cshtml" />
+    <Content Include="Views\ErrorPages\Page400.cshtml" />
+    <Content Include="Views\ErrorPages\Page404.cshtml" />
+    <Content Include="Views\ErrorPages\Page500.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

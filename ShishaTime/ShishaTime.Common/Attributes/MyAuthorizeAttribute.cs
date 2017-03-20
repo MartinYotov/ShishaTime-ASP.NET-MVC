@@ -9,7 +9,7 @@ namespace ShishaTime.Common.Attributes
         {
             if (filterContext.HttpContext.User.Identity.IsAuthenticated)
             {
-                filterContext.Result = new HttpStatusCodeResult(403);
+                filterContext.Result = new HttpStatusCodeResult(401);
             }
             else
             {
