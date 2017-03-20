@@ -29,7 +29,7 @@ namespace ShishaTime.Web.Models
         public void CreateMappings(IMapperConfigurationExpression config)
         {
             config.CreateMap<AddBarViewModel, ShishaBar>()
-                .ForMember(d => d.ImagePathBig, src => src.MapFrom(s => ("~/Content/Images/" + s.Image.FileName))); 
+                .ForMember(d => d.ImagePathBig, src => src.MapFrom(s => ("~/Images/" + s.Image.FileName))); 
         }
     }
 }

@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarsService.cs" />
+    <Compile Include="Contracts\IBarsService.cs" />
     <Compile Include="Contracts\IMappingService.cs" />
     <Compile Include="Contracts\IRegionsService.cs" />
     <Compile Include="MappingService.cs" />
