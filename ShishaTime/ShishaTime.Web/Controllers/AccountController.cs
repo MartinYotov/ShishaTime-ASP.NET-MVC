@@ -395,7 +395,7 @@ namespace ShishaTime.Web.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home", new { area = "" });
+            return RedirectToAction("Index", "Home");
         }
 
         //

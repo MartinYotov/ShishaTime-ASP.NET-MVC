@@ -1,0 +1,7 @@
+﻿@if (User.IsInRole("Admin"))
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Add bar", "Index", "AddBar", new { area = "Admin" }, htmlAttributes: new { id = "registerLink" })</li>
+    </ul>
+}
+
