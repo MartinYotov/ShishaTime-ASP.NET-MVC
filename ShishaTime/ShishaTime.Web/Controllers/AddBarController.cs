@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShishaTime.Common.Attributes;
 using ShishaTime.Models;
 using ShishaTime.Services.Contracts;
 using ShishaTime.Web.Models;
@@ -11,6 +12,7 @@ using System.Web.Mvc;
 
 namespace ShishaTime.Web.Controllers
 {
+    [MyAuthorize(Roles = "Admin")]
     public class AddBarController : Controller
     {
         private IMappingService mappingService;

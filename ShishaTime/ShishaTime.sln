@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShishaTime.Services.Tests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{34942FDE-253E-452D-BA72-4A21AFD62814}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShishaTime.Common", "ShishaTime.Common\ShishaTime.Common.csproj", "{059939C9-1B49-46D4-8E2E-804107E1C194}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{0B6C529A-08D2-4CD0-A480-ADD558CBCA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B6C529A-08D2-4CD0-A480-ADD558CBCA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B6C529A-08D2-4CD0-A480-ADD558CBCA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059939C9-1B49-46D4-8E2E-804107E1C194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059939C9-1B49-46D4-8E2E-804107E1C194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059939C9-1B49-46D4-8E2E-804107E1C194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059939C9-1B49-46D4-8E2E-804107E1C194}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
