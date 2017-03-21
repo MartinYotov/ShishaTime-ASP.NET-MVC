@@ -3,6 +3,7 @@ using ShishaTime.Common.Attributes;
 using ShishaTime.Models;
 using ShishaTime.Services.Contracts;
 using ShishaTime.Web.Areas.Admin.Models;
+using System;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -21,6 +22,21 @@ namespace ShishaTime.Web.Areas.Admin.Controllers
                                 IRegionsService regionsService,
                                 IBarsService barsService)
         {
+            if (mappingService == null)
+            {
+                throw new ArgumentNullException("Mapping service cannot be null.");
+            }
+
+            if (regionsService == null)
+            {
+                throw new ArgumentNullException("Regions service cannot be null.");
+            }
+
+            if (barsService == null)
+            {
+                throw new ArgumentNullException("Bars service cannot be null.");
+            }
+
             this.mappingService = mappingService;
             this.regionsService = regionsService;
             this.barsService = barsService;

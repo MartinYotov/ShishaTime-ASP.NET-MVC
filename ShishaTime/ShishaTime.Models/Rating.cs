@@ -13,7 +13,7 @@ namespace ShishaTime.Models
         public int Id { get; set; }
 
         [Required]
-        [Range(0, 1000)]
+        [Range(0, 5)]
         public double Vote { get; set; }
 
         [ForeignKey("Bar")]

@@ -200,6 +200,7 @@
     <Compile Include="AutoMapper\IMapFrom.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\AddBarController.cs" />
+    <Compile Include="Controllers\BarController.cs" />
     <Compile Include="Controllers\ErrorPagesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -208,6 +209,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\AddBarViewModel.cs" />
+    <Compile Include="Models\BarViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -278,6 +280,7 @@
     <Content Include="Views\ErrorPages\Page400.cshtml" />
     <Content Include="Views\ErrorPages\Page404.cshtml" />
     <Content Include="Views\ErrorPages\Page500.cshtml" />
+    <Content Include="Views\Bar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

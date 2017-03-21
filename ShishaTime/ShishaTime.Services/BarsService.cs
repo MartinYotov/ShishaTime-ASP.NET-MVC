@@ -20,6 +20,11 @@ namespace ShishaTime.Services
             this.data = data;
         }
 
+        public ShishaBar GetBarById(int id)
+        {
+            return this.data.Bars.GetById(id);
+        }
+
         public void AddBar(ShishaBar bar)
         {
             this.data.Bars.Add(bar);
