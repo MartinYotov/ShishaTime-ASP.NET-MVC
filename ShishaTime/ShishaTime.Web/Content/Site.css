@@ -29,3 +29,32 @@ textarea {
     background-image: url('../Images/home-image.png');
     background-repeat: no-repeat;
 }
+
+.reviews-container{
+    margin-top: 6%;
+    width: 500px;
+}
+
+.review-form{
+    margin-bottom: 15%;
+   
+}
+
+.review-input{
+     width: 600px;
+}
+.review-container{
+    width: 500px;
+}
+
+.review-header{
+    height: 60px;
+}
+
+.review-footer{
+    height: 50px;
+}
+
+.review-body {
+    word-wrap: break-word;
+}

@@ -13,6 +13,11 @@ namespace ShishaTime.Models
         public int Id { get; set; }
 
         [Required]
+        [MinLength(5)]
+        [MaxLength(20)]
+        public string Title { get; set; }
+
+        [Required]
         [MinLength(20)]
         [MaxLength(500)]
         public string Text { get; set; }

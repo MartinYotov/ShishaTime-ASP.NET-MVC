@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using ShishaTime.Data.Contracts;
+using ShishaTime.Data.Migrations;
 using ShishaTime.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -10,7 +11,7 @@ namespace ShishaTime.Data
     {
         public ShishaTimeDbContext() : base("ShishaTime")
         {
-            Database.SetInitializer<ShishaTimeDbContext>(new CreateDatabaseIfNotExists<ShishaTimeDbContext>());
+            Database.SetInitializer<ShishaTimeDbContext>(new MigrateDatabaseToLatestVersion<ShishaTimeDbContext, Configuration>());
         }
         
         public virtual IDbSet<ShishaBar> Bars { get; set; }

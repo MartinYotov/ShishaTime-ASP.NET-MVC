@@ -3,5 +3,73 @@
     ViewBag.Title = Model.Name;
 }
 
-<h2>@Model.Name</h2>
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Model.Name</h2>
+
+        <div class="lead">
+            <img src="@Model.Image" alt="@Model.Name" />
+        </div>
+        <p class="lead"><strong>Address:</strong> @Model.Address</p>
+        <p class="lead"><strong>Region:</strong> @Model.Region</p>
+        @using (Ajax.BeginForm("AddReview", "Bar", null,
+                                        new AjaxOptions
+                                        {
+                                            UpdateTargetId = "reviews",
+                                            InsertionMode = InsertionMode.Replace,
+                                            HttpMethod = "POST",
+                                            OnComplete = "ClearInputFields"
+                                        }, new { id = "reviewForm" }))
+        {
+            <div class="modal-content review-container">
+                <div class="modal-header">
+                    <p>Write a review...</p>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <input type="hidden" name="barId" value="@Model.Id" />
+                        <div class="form-group review-form">
+                            <label for="title" class="col-lg-2 control-label">Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control review-input" name="title" id="title" placeholder="Title">
+                            </div>
+                        </div>
+                        <div class="form-group review-form">
+                            <label for="text" class="col-lg-2 control-label">Review</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control review-input" id="text" name="text" placeholder="Review"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-offset-7 reviews-container">
+        <h3>Reviews</h3>
+        @if (Model.Reviews.Count != 0)
+        {
+            <div id="reviews">
+                @Html.Partial("_ReviewsPartial", Model.Reviews)
+            </div>
+        }
+        else
+        {
+            <p>No reviews yet. Be the first one to leave your impression.</p>
+        }
+    </div>
+</div>
+<script>
+    function ClearInputFields() {
+        $("#title").val("");
+        $("#text").val("");
+    }
+</script>
+
+
 
