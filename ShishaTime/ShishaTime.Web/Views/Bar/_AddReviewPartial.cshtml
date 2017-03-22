@@ -1,0 +1,47 @@
+﻿@model AddReviewViewModel
+
+@using (Ajax.BeginForm("AddReview", "Bar", null,
+                                                    new AjaxOptions
+                                                    {
+                                                        UpdateTargetId = "reviews",
+                                                        InsertionMode = InsertionMode.Replace,
+                                                        HttpMethod = "POST",
+                                                        OnComplete = "clearInputFields",
+                                                        OnBegin = "validateForm"
+                                                    }, new { id = "reviewForm" }))
+{
+    <div class="modal-content review-container">
+        <div class="modal-header">
+            <p>Write a review...</p>
+        </div>
+        <div class="modal-body">
+            <fieldset>
+                <input type="hidden" name="barId" value="@ViewBag.BarId"/>
+                <div class="form-group review-form">
+                    @Html.LabelFor(m => m.Title, new { @class = "col-lg-2 control-label" })
+                    @*<label for="title" class="col-lg-2 control-label">Title</label>*@
+                    <div class="col-lg-10">
+                        @Html.TextBoxFor(m => m.Title, new { @class = "form-control review-input", @id = "title", @placeholder = "Title" })
+                        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                        @*<input type="text" class="form-control review-input" name="title" id="title" placeholder="Title">*@
+                    </div>
+                </div>
+                <div class="form-group review-form">
+                    @Html.LabelFor(m => m.Text, new { @class = "col-lg-2 control-label" })
+                    @*<label for="text" class="col-lg-2 control-label">Review</label>*@
+                    <div class="col-lg-10">
+                        @Html.TextAreaFor(m => m.Text, new { @class = "form-control review-input", @id = "text", @placeholder = "Text" })
+                        @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger" })
+                        @*<textarea class="form-control review-input" id="text" name="text" placeholder="Review"></textarea>*@
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="modal-footer">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+}
+

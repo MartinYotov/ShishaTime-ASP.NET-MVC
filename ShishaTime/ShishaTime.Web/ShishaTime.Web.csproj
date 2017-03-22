@@ -230,6 +230,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\AddBarViewModel.cs" />
+    <Compile Include="Models\AddReviewViewModel.cs" />
     <Compile Include="Models\BarViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,6 +309,7 @@
     <Content Include="Views\ErrorPages\Page500.cshtml" />
     <Content Include="Views\Bar\Index.cshtml" />
     <Content Include="Views\Bar\_ReviewsPartial.cshtml" />
+    <Content Include="Views\Bar\_AddReviewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
