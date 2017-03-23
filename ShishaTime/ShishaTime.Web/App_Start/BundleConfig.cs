@@ -25,9 +25,15 @@ namespace ShishaTime.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/star-rating").Include(
+                      "~/Scripts/star-rating.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-darkly.min.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/star-rating").Include(
+                      "~/Content/star-rating.min.css"));
         }
     }
 }

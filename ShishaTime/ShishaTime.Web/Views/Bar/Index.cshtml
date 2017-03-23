@@ -11,6 +11,8 @@
         <div class="lead">
             <img src="@Model.Image" alt="@Model.Name" />
         </div>
+        <label for="input-7-xs" class="control-label">Rate this bar!</label>
+        <input id="input-7-xs" class="rating rating-loading" value="5" data-min="0" data-max="5" data-step="1" data-size="sm">
         <p class="lead"><strong>Address:</strong> @Model.Address</p>
         <p class="lead"><strong>Region:</strong> @Model.Region</p>
         @Html.Partial("_AddReviewPartial", new AddReviewViewModel())
