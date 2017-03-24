@@ -56,6 +56,10 @@
     <Compile Include="BarsServiceTests\Constructor_Should.cs" />
     <Compile Include="BarsServiceTests\GetBarById_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingServiceTests\AddRating_Should.cs" />
+    <Compile Include="RatingServiceTests\Constructor_Should.cs" />
+    <Compile Include="RatingServiceTests\GetUserRating_Should.cs" />
+    <Compile Include="RatingServiceTests\UpdateBarRating_Should.cs" />
     <Compile Include="RegionsServiceTests\Constructor_Should.cs" />
     <Compile Include="RegionsServiceTests\GetAllRegions_Should.cs" />
     <Compile Include="ReviewsServiceTests\AddReview_Should.cs" />

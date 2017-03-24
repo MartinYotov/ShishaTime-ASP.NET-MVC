@@ -2,6 +2,7 @@
 using ShishaTime.Models;
 using ShishaTime.Data.Contracts;
 using System.Linq;
+using System;
 
 namespace ShishaTime.Services
 {
@@ -11,6 +12,11 @@ namespace ShishaTime.Services
 
         public RatingService(IShishaTimeData data)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("Data cannot be null.");
+            }
+
             this.data = data;
         }
 
