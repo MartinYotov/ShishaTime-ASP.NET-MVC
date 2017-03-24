@@ -313,6 +313,7 @@
     <Content Include="Views\Bar\_ReviewsPartial.cshtml" />
     <Content Include="Views\Bar\_AddReviewPartial.cshtml" />
     <Content Include="Views\Bar\_RatingPartial.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
