@@ -13,6 +13,7 @@ namespace ShishaTime.Web.App_Start.NinjectModules
             this.Bind<IRegionsService>().To<RegionsService>().InRequestScope();
             this.Bind<IBarsService>().To<BarsService>().InRequestScope();
             this.Bind<IReviewsService>().To<ReviewsService>().InRequestScope();
+            this.Bind<IRatingService>().To<RatingService>().InRequestScope();
         }
     }
 }

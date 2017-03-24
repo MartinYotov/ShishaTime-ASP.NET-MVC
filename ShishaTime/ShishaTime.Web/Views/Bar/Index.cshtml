@@ -5,18 +5,35 @@
 }
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 left-part">
         <h2>@Model.Name</h2>
 
         <div class="lead">
             <img src="@Model.Image" alt="@Model.Name" />
         </div>
-        <label for="input-7-xs" class="control-label">Rate this bar!</label>
-        <input id="input-7-xs" class="rating rating-loading" value="5" data-min="0" data-max="5" data-step="1" data-size="sm">
-        <p class="lead"><strong>Address:</strong> @Model.Address</p>
-        <p class="lead"><strong>Region:</strong> @Model.Region</p>
-        @Html.Partial("_AddReviewPartial", new AddReviewViewModel())
-    </div>
+        <h3>@Model.Name Rating</h3>
+        <div id="rating">
+            @Html.Partial("_RatingPartial", Model.RatingValue)
+        </div>  
+        <hr/>
+        @if (this.User.Identity.IsAuthenticated)
+        {
+            <label for="user-rating" class="control-label">Rate this bar!</label>
+            <div id="user-rating">
+                <input id="user-rating" class="rating rating-loading" value="@Model.CurrentUserRating" data-min="0" data-max="5" data-step="1" data-size="xs">
+            </div>
+        }
+            <p class="lead"><strong>Address:</strong> @Model.Address</p>
+            <p class="lead"><strong>Region:</strong> @Model.Region</p>
+            @if (this.User.Identity.IsAuthenticated)
+            {
+                @Html.Partial("_AddReviewPartial", new AddReviewViewModel())
+            }
+            else
+            {
+                <h3 class="msg">Log in to rate and review this shisha bar!</h3>
+            }
+        </div>
     <div class="col-md-offset-7 reviews-container">
         <h3>Reviews</h3>
         @if (Model.Reviews.Count != 0)
@@ -31,16 +48,40 @@
         }
     </div>
 </div>
-<script>
-    function clearInputFields() {
-        $("#title").val("");
-        $("#text").val("");
-    }
 
-    function validateForm() {
-        return $('#reviewForm').validate().form();
-    }
-</script>
+@using (Ajax.BeginForm("Rate", "Bar", null,
+                                           new AjaxOptions
+                                           {
+                                               UpdateTargetId = "rating",
+                                               InsertionMode = InsertionMode.Replace,
+                                               HttpMethod = "POST",
+                                           }, new { id = "rating-form" }))
+{
+    <input type="hidden" id="barId" name="barId">
+    <input type="hidden" id="value" name="value">
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/star-rating")
+    <script>
+        function clearInputFields() {
+            $("#title").val("");
+            $("#text").val("");
+        }
+        
+        function validateForm() {
+            return $("#reviewForm").validate().form();
+        }
+        
+        $(document).ready(function () {
+            $("#user-rating").on("rating.change", function (event, value, caption) {
+                $("#barId").first().val(@ViewBag.BarId);
+                $("#value").first().val(value);
+                $("#rating-form").submit();
+            });
+        });
+    </script>  
+}
+  
 
 
 

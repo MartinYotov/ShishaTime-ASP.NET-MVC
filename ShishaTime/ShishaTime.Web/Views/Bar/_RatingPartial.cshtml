@@ -1,0 +1,53 @@
+﻿@model double
+
+<div class="rating-container rating-lg rating-animate">
+    <div class="rating-stars">
+        <span class="empty-stars">
+        <span class="star">
+            <i class="glyphicon glyphicon-star-empty">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star-empty">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star-empty">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star-empty">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star-empty">
+            </i>
+        </span>
+    </span>
+    <span class="filled-stars" style="width: @(Model * 20)%;">
+        <span class="star">
+            <i class="glyphicon glyphicon-star">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star">
+            </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star">
+            </i>
+        </span>
+        <span class="star">
+           <i class="glyphicon glyphicon-star">
+           </i>
+        </span>
+        <span class="star">
+            <i class="glyphicon glyphicon-star">
+            </i>
+        </span>
+    </span>
+</div>
+<div class="caption">
+    <span class="label label-primary">@(string.Format("{0:F2}", Model))</span>
+</div>
+</div>

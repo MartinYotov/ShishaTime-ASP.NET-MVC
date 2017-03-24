@@ -13,10 +13,12 @@ namespace ShishaTime.Web.Controllers
         private IMappingService mappingService;
         private IBarsService barsService;
         private IReviewsService reviewsService;
+        private IRatingService ratingService;
 
         public BarController(IMappingService mappingService,
                              IBarsService barsService,
-                             IReviewsService reviewsService)
+                             IReviewsService reviewsService,
+                             IRatingService ratingService)
         {
             if (mappingService == null)
             {
@@ -33,20 +35,28 @@ namespace ShishaTime.Web.Controllers
                 throw new ArgumentNullException("Reviews service cannot be null.");
             }
 
+            if (ratingService == null)
+            {
+                throw new ArgumentNullException("Rating service cannot be null.");
+            }
+
             this.mappingService = mappingService;
             this.barsService = barsService;
             this.reviewsService = reviewsService;
+            this.ratingService = ratingService;
         }
         public ActionResult Index(int id = 1)
         {
             var bar = this.barsService.GetBarById(id);
 
-            if(bar == null)
+            if (bar == null)
             {
                 return this.Redirect("errorPages/page404");
             }
 
             var barModel = mappingService.Map<ShishaBar, BarViewModel>(bar);
+            string userId = this.User.Identity.GetUserId();
+            barModel.CurrentUserRating = this.ratingService.GetUserRating(id, userId);
 
             return View(barModel);
         }
@@ -69,6 +79,22 @@ namespace ShishaTime.Web.Controllers
             var reviews = this.reviewsService.GetBarReviews(barId);
 
             return this.PartialView("_ReviewsPartial", reviews);
+        }
+
+        [HttpPost]
+        public ActionResult Rate(int barId, int value)
+        {
+            var rating = new Rating()
+            {
+                BarId = barId,
+                UserId = this.User.Identity.GetUserId(),
+                Value = value
+            };
+
+            this.ratingService.AddRating(rating);
+            var barRating = this.ratingService.UpdateBarRating(barId);
+
+            return this.PartialView("_RatingPartial", barRating);
         }
     }
 }

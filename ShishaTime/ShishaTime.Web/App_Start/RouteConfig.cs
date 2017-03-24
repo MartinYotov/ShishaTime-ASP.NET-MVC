@@ -13,17 +13,17 @@ namespace ShishaTime.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-           // routes.MapRoute(
-           //    name: "Bar",
-           //    url: "bar/{id}",
-           //    defaults: new { controller = "Bar", id = UrlParameter.Optional }
-           //);
+            routes.MapRoute(
+               name: "Bar",
+               url: "bar/{id}",
+               defaults: new { controller = "Bar", action = "Index", id = UrlParameter.Optional }
+           );
 
-           // routes.MapRoute(
-           //    name: "BarReview",
-           //    url: "bar/{action}/{id}",
-           //    defaults: new { controller = "Bar", id = UrlParameter.Optional }
-           //);
+            // routes.MapRoute(
+            //    name: "BarReview",
+            //    url: "bar/{action}/{id}",
+            //    defaults: new { controller = "Bar", id = UrlParameter.Optional }
+            //);
 
             routes.MapRoute(
                 name: "Default",

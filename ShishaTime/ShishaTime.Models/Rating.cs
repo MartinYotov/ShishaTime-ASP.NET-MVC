@@ -14,7 +14,7 @@ namespace ShishaTime.Models
 
         [Required]
         [Range(0, 5)]
-        public double Vote { get; set; }
+        public int Value { get; set; }
 
         [ForeignKey("Bar")]
         public int BarId { get; set; }

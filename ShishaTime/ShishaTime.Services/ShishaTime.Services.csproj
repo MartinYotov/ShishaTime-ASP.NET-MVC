@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarsService.cs" />
+    <Compile Include="Contracts\IRatingService.cs" />
+    <Compile Include="RatingService.cs" />
     <Compile Include="ReviewsService.cs" />
     <Compile Include="Contracts\IBarsService.cs" />
     <Compile Include="Contracts\IMappingService.cs" />

@@ -58,3 +58,27 @@ textarea {
 .review-body {
     word-wrap: break-word;
 }
+
+#rating .clear-rating{
+    display: none;
+}
+
+#user-rating .clear-rating{
+    display: none;
+}
+
+#rating .rating-stars{
+    cursor: default;
+}
+
+#user-rating{
+    margin-bottom: 20px;
+}
+
+.row .left-part{
+    width: 52%;
+}
+
+h3.msg{
+    margin-top: 40px;
+}

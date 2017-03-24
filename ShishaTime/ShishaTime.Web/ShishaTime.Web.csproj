@@ -312,6 +312,7 @@
     <Content Include="Views\Bar\Index.cshtml" />
     <Content Include="Views\Bar\_ReviewsPartial.cshtml" />
     <Content Include="Views\Bar\_AddReviewPartial.cshtml" />
+    <Content Include="Views\Bar\_RatingPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

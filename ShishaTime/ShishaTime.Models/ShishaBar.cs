@@ -39,6 +39,8 @@ namespace ShishaTime.Models
 
         public virtual Region Region { get; set; }
 
+        public double RatingValue { get; set; }
+
         public virtual ICollection<Review> Reviews
         {
             get

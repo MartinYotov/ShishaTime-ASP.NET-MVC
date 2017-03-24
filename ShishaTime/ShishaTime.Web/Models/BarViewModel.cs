@@ -16,6 +16,10 @@ namespace ShishaTime.Web.Models
 
         public string Region { get; set; }
 
+        public double RatingValue { get; set; }
+
+        public int CurrentUserRating { get; set; }
+
         public ICollection<Rating> Ratings { get; set; }
 
         public ICollection<Review> Reviews { get; set; }
