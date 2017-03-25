@@ -26,8 +26,6 @@ namespace ShishaTime.Models
         [MaxLength(30)]
         public string Name { get; set; }
 
-        public string ImagePathSmall { get; set; }
-
         public string ImagePathBig { get; set; }
 
         [Required]
