@@ -82,3 +82,45 @@ textarea {
 h3.msg{
     margin-top: 40px;
 }
+
+.small-img{
+    height: 200px;
+}
+
+.div-inline{
+    display: inline-block;
+}
+
+#home-page-rating .clear-rating{
+    display: none;
+}
+
+#home-page-rating .caption{
+    display: none;
+}
+
+.home-bar{
+    width: 650px;
+}
+
+.home-bar .modal-body{
+    position: relative;
+    height: 250px;
+}
+
+.home-bar .div-inline{
+    position: absolute;
+}
+
+.home-bar .right{
+    right: 0;
+    padding-right: 15px;
+}
+
+h2.top-rated{
+    text-align: center;
+}
+
+.home-bar .rating-stars{
+    cursor: default;
+}

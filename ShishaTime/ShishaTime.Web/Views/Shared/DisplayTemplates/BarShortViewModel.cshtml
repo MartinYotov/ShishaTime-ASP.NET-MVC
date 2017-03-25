@@ -1,0 +1,25 @@
+﻿@model BarShortViewModel
+@{
+    ViewBag.Title = "BarShortViewModel";
+}
+
+<div class="home-bar modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div id="home-page-rating" class="div-inline">
+                <h3>@Html.ActionLink(@Model.Name, null, "Bar", new { id = Model.Id }, null)</h3>
+                <input id="user-rating" class="rating rating-loading" value="@Model.RatingValue" data-min="0" data-max="5" data-step="0.1" data-readonly="true" data-size="sm">
+                <div class="caption">
+                    <span class="label label-primary">@(string.Format("{0:F2}", Model))</span>
+                </div>
+            </div>
+            <div class="div-inline right">
+                <img class="small-img" src="@Model.Image" alt="@Model.Name" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
