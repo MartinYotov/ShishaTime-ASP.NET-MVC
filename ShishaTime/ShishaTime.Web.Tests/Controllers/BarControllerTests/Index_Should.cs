@@ -151,10 +151,7 @@ namespace ShishaTime.Web.Tests.Controllers.BarControllerTests
                                                mockedRatingService.Object,
                                                mockedUserProvider.Object);
 
-            //Act
-            controller.Index(barId);
-
-            //Assert
+            //Act & Assert
             controller.WithCallTo(c => c.Index(2))
                 .ShouldRenderDefaultView()
                 .WithModel<BarViewModel>();
@@ -184,10 +181,7 @@ namespace ShishaTime.Web.Tests.Controllers.BarControllerTests
                                                mockedRatingService.Object,
                                                mockedUserProvider.Object);
 
-            //Act
-            controller.Index(barId);
-
-            //Assert
+            //Act & Assert
             controller.WithCallTo(c => c.Index(2))
                 .ShouldRenderDefaultView()
                 .WithModel<BarViewModel>(ViewModel =>

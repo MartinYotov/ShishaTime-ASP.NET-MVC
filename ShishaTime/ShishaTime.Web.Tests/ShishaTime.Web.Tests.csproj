@@ -85,8 +85,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BarControllerTests\AddReview_Should.cs" />
     <Compile Include="Controllers\BarControllerTests\Constructor_Should.cs" />
     <Compile Include="Controllers\BarControllerTests\Index_Should.cs" />
+    <Compile Include="Controllers\BarControllerTests\Rate_Should.cs" />
     <Compile Include="Controllers\ErrorPagesControllerTests\Page400_Should.cs" />
     <Compile Include="Controllers\ErrorPagesControllerTests\Page401_Should.cs" />
     <Compile Include="Controllers\ErrorPagesControllerTests\Page404_Should.cs" />
