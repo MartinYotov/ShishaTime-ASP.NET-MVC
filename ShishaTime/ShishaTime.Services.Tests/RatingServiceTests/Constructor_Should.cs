@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
+using ShishaTime.Data.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,19 @@ namespace ShishaTime.Services.Tests.RatingServiceTests
     [TestFixture]
     public class Constructor_Should
     {
+        [Test]
+        public void ReturnAnInstance_ParametersAreNotNull()
+        {
+            //Arrange
+            var mockedData = new Mock<IShishaTimeData>();
+
+            //Act
+            var service = new RatingService(mockedData.Object);
+
+            //Assert
+            Assert.IsInstanceOf<RatingService>(service);
+        }
+
         [Test]
         public void ThrowArgumentNullException_WhenDataIsNull()
         {

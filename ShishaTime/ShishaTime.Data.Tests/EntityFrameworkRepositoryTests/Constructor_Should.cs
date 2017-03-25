@@ -15,6 +15,19 @@ namespace ShishaTime.Data.Tests.EntityFrameworkRepositoryTests
     public class Constructor_Should
     {
         [Test]
+        public void ReturnAnInstance_ParametersAreNotNull()
+        {
+            //Arrange
+            var mockedDbContext = new Mock<IShishaTimeDbContext>();
+
+            //Act
+            var efRepo = new EntityFrameworkRepository<MockedModel>(mockedDbContext.Object);
+
+            //Assert
+            Assert.IsInstanceOf<EntityFrameworkRepository<MockedModel>>(efRepo);
+        }
+
+        [Test]
         public void ThrowArgumentNullException_WhenContextIsNull()
         {
             //Arrange, Act, Assert

@@ -64,6 +64,7 @@ namespace ShishaTime.Web.App_Start
         {
             kernel.Load(new DataNinjectModule());
             kernel.Load(new ServicesNinjectModule());
+            kernel.Load(new ProvidersNinjectModule());
         }        
     }
 }

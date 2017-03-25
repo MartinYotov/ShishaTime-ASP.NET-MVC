@@ -5,6 +5,7 @@ using System;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using System.Net;
+using ShishaTime.Common.Providers.Contracts;
 
 namespace ShishaTime.Web.Controllers
 {
@@ -14,11 +15,13 @@ namespace ShishaTime.Web.Controllers
         private IBarsService barsService;
         private IReviewsService reviewsService;
         private IRatingService ratingService;
+        private IUserProvider userProvider;
 
         public BarController(IMappingService mappingService,
                              IBarsService barsService,
                              IReviewsService reviewsService,
-                             IRatingService ratingService)
+                             IRatingService ratingService,
+                             IUserProvider userProvider)
         {
             if (mappingService == null)
             {
@@ -40,10 +43,16 @@ namespace ShishaTime.Web.Controllers
                 throw new ArgumentNullException("Rating service cannot be null.");
             }
 
+            if (userProvider == null)
+            {
+                throw new ArgumentNullException("User provider cannot be null.");
+            }
+
             this.mappingService = mappingService;
             this.barsService = barsService;
             this.reviewsService = reviewsService;
             this.ratingService = ratingService;
+            this.userProvider = userProvider;
         }
         public ActionResult Index(int id = 1)
         {
@@ -55,9 +64,8 @@ namespace ShishaTime.Web.Controllers
             }
 
             var barModel = mappingService.Map<ShishaBar, BarViewModel>(bar);
-            string userId = this.User.Identity.GetUserId();
+            string userId = this.userProvider.GetUserId();
             barModel.CurrentUserRating = this.ratingService.GetUserRating(id, userId);
-
             return View(barModel);
         }
 
@@ -71,8 +79,8 @@ namespace ShishaTime.Web.Controllers
                 BarId = barId,
                 Title = title,
                 Text = text,
-                UserId = this.User.Identity.GetUserId()
-            };
+                UserId = this.userProvider.GetUserId()
+        };
 
             this.reviewsService.AddReview(barId, review);
 
@@ -87,7 +95,7 @@ namespace ShishaTime.Web.Controllers
             var rating = new Rating()
             {
                 BarId = barId,
-                UserId = this.User.Identity.GetUserId(),
+                UserId = this.userProvider.GetUserId(),
                 Value = value
             };
 

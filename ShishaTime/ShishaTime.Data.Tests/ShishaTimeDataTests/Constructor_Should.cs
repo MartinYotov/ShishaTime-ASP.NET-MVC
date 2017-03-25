@@ -14,6 +14,29 @@ namespace ShishaTime.Data.Tests.ShishaTimeDataTests
     public class Constructor_Should
     {
         [Test]
+        public void ReturnAnInstance_ParametersAreNotNull()
+        {
+            //Arrange
+            var mockedContext = new Mock<IShishaTimeDbContext>();
+            var mockedBarsRepo = new Mock<IEntityFrameworkRepository<ShishaBar>>();
+            var mockedUsersRepo = new Mock<IEntityFrameworkRepository<User>>();
+            var mockedRegionsRepo = new Mock<IEntityFrameworkRepository<Region>>();
+            var mockedReviewsRepo = new Mock<IEntityFrameworkRepository<Review>>();
+            var mockedRatingsRepo = new Mock<IEntityFrameworkRepository<Rating>>();
+
+            //Act
+            var data = new ShishaTimeData(mockedContext.Object,
+                                          mockedBarsRepo.Object,
+                                          mockedUsersRepo.Object,
+                                          mockedRegionsRepo.Object,
+                                          mockedReviewsRepo.Object,
+                                          mockedRatingsRepo.Object);
+
+            //Assert
+            Assert.IsInstanceOf<ShishaTimeData>(data);
+        }
+
+        [Test]
         public void ThrowArgumentNullException_WhenContextIsNull()
         {
             //Arrange
