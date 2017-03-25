@@ -1,3 +1,12 @@
 ﻿@model IEnumerable<Review>
 
-@Html.DisplayFor(m => Model)
+@if (Model.Count() != 0)
+{
+
+    @Html.DisplayFor(m => Model)
+
+}
+else
+{
+    <p>No reviews yet. Be the first one to leave your impression.</p>
+}

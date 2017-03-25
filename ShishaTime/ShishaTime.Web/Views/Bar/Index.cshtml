@@ -36,16 +36,9 @@
         </div>
     <div class="col-md-offset-7 reviews-container">
         <h3>Reviews</h3>
-        @if (Model.Reviews.Count != 0)
-        {
-            <div id="reviews">
-                @Html.DisplayFor(m => m.Reviews)
-            </div>
-        }
-        else
-        {
-            <p>No reviews yet. Be the first one to leave your impression.</p>
-        }
+        <div id="reviews">
+            @Html.Partial("_ReviewsPartial", Model.Reviews)
+        </div>
     </div>
 </div>
 

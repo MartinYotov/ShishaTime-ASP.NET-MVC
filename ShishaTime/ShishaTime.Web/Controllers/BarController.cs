@@ -72,8 +72,6 @@ namespace ShishaTime.Web.Controllers
         [HttpPost]
         public ActionResult AddReview(int barId, string title, string text)
         {
-            ModelState.Clear();
-
             var review = new Review()
             {
                 BarId = barId,
