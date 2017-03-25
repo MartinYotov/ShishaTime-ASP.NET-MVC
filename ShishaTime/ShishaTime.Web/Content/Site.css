@@ -124,3 +124,7 @@ h2.top-rated{
 .home-bar .rating-stars{
     cursor: default;
 }
+
+.home-bar .rating-stars #user-rating{
+    cursor: default;
+}

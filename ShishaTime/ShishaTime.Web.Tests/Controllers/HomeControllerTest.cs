@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using ShishaTime.Web;
 using ShishaTime.Web.Controllers;
 using NUnit.Framework;
+using Moq;
+using ShishaTime.Services.Contracts;
 
 namespace ShishaTime.Web.Tests.Controllers
 {
@@ -16,7 +18,10 @@ namespace ShishaTime.Web.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var mockedMappingService = new Mock<IMappingService>();
+            var mockedBarsService = new Mock<IBarsService>();
+            HomeController controller = new HomeController(mockedMappingService.Object,
+                                                           mockedBarsService.Object);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -29,7 +34,10 @@ namespace ShishaTime.Web.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var mockedMappingService = new Mock<IMappingService>();
+            var mockedBarsService = new Mock<IBarsService>();
+            HomeController controller = new HomeController(mockedMappingService.Object,
+                                                           mockedBarsService.Object);
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -42,7 +50,10 @@ namespace ShishaTime.Web.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var mockedMappingService = new Mock<IMappingService>();
+            var mockedBarsService = new Mock<IBarsService>();
+            HomeController controller = new HomeController(mockedMappingService.Object,
+                                                           mockedBarsService.Object);
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;

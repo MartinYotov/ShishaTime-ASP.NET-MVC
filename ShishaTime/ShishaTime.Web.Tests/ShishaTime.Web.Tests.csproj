@@ -104,6 +104,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ShishaTime.Services\ShishaTime.Services.csproj">
+      <Project>{778B39F8-3E5F-4EB1-BEE4-36AC93FC8B23}</Project>
+      <Name>ShishaTime.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShishaTime.Web\ShishaTime.Web.csproj">
       <Project>{1A0548A3-7896-46DF-8B46-76F17997E50A}</Project>
       <Name>ShishaTime.Web</Name>
