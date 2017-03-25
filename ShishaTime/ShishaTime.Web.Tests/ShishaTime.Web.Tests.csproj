@@ -93,11 +93,13 @@
     <Compile Include="Controllers\ErrorPagesControllerTests\Page401_Should.cs" />
     <Compile Include="Controllers\ErrorPagesControllerTests\Page404_Should.cs" />
     <Compile Include="Controllers\ErrorPagesControllerTests\Page500_Should.cs" />
+    <Compile Include="Controllers\HomeControllerTests\About_Should.cs" />
+    <Compile Include="Controllers\HomeControllerTests\Constructor_Should.cs" />
+    <Compile Include="Controllers\HomeControllerTests\Contact_Should.cs" />
+    <Compile Include="Controllers\HomeControllerTests\Index_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\HomeControllerTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
