@@ -9,6 +9,8 @@ namespace ShishaTime.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.LowercaseUrls = true;
+
             routes.MapRoute(
               name: "Rate",
               url: "bar/rate",

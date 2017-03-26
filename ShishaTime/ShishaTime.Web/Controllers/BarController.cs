@@ -70,6 +70,7 @@ namespace ShishaTime.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddReview(int barId, string title, string text)
         {
             var review = new Review()
