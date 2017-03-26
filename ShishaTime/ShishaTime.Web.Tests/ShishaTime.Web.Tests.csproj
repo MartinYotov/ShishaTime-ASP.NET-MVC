@@ -85,6 +85,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminArea\AddBarControllerTests\Constructor_Should.cs" />
+    <Compile Include="Controllers\AdminArea\AddBarControllerTests\IndexGet_Should.cs" />
+    <Compile Include="Controllers\AdminArea\AddBarControllerTests\IndexPost_Should.cs" />
     <Compile Include="Controllers\BarControllerTests\AddReview_Should.cs" />
     <Compile Include="Controllers\BarControllerTests\Constructor_Should.cs" />
     <Compile Include="Controllers\BarControllerTests\Index_Should.cs" />

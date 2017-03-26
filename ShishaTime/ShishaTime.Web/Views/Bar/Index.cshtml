@@ -9,7 +9,10 @@
         <h2>@Model.Name</h2>
 
         <div class="lead">
-            <img src="@Model.Image" alt="@Model.Name" />
+            @if (Model.Image != null)
+            {
+                <img src="@Model.Image" alt="@Model.Name" />
+            }
         </div>
         <h3>@Model.Name Rating</h3>
         <div id="rating">

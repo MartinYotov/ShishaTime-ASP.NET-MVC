@@ -14,7 +14,10 @@
                 </div>
             </div>
             <div class="div-inline right">
-                <img class="small-img" src="@Model.Image" alt="@Model.Name" />
+                @if (Model.Image != null)
+                {
+                    <img class="small-img" src="@Model.Image" alt="@Model.Name" />
+                }
             </div>
         </div>
     </div>
