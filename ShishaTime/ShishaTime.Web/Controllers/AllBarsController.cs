@@ -18,6 +18,16 @@ namespace ShishaTime.Web.Controllers
         public AllBarsController(IMappingService mappingService,
                                  IBarsService barsService)
         {
+            if (mappingService == null)
+            {
+                throw new ArgumentNullException("Mapping service cannot be null.");
+            }
+
+            if (barsService == null)
+            {
+                throw new ArgumentNullException("Bars service cannot be null.");
+            }
+
             this.mappingService = mappingService;
             this.barsService = barsService;
         }

@@ -101,7 +101,6 @@ namespace ShishaTime.Web.Tests.Controllers.BarControllerTests
                Throws.ArgumentNullException.With.Message.Contains("Bars service cannot be null."));
         }
 
-
         [Test]
         public void ThrowArgumentNullException_WhenReviewsServiceIsNull()
         {
