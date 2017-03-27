@@ -32,22 +32,20 @@ namespace ShishaTime.Web.Controllers
 
         public ActionResult Index()
         {
-            var bars = this.barsService.GetTopRated(2);
+            var bars = this.barsService.GetTopRated(5);
             var barsShort = this.mappingService.Map<IEnumerable<ShishaBar>, IEnumerable<BarShortViewModel>>(bars);
             return View(barsShort);
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Welcome to ShishaTime!";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

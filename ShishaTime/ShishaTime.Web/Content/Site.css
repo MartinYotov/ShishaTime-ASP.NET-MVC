@@ -132,3 +132,7 @@ h2.top-rated{
 .all-bars.modal-dialog{
     margin-left: 0px;
 }
+
+.img-large{
+    width: 500px;
+}

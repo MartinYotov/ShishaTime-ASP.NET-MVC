@@ -32,7 +32,7 @@ namespace ShishaTime.Web.Controllers
             this.barsService = barsService;
         }
 
-        public ActionResult Index(int page = 1, int pageSize = 3)
+        public ActionResult Index(int page = 1, int pageSize = 5)
         {
             if (page < 1)
             {

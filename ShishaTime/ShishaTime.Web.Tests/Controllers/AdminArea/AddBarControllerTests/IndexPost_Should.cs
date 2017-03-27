@@ -101,7 +101,7 @@ namespace ShishaTime.Web.Tests.Controllers.AdminArea.AddBarControllerTests
 
             //Act & Assert
             controller.WithCallTo(x => x.Index(barModel))
-                .ShouldRedirectTo("/home");
+                .ShouldRedirectTo("/allbars");
         }
 
         [Test]
@@ -132,7 +132,7 @@ namespace ShishaTime.Web.Tests.Controllers.AdminArea.AddBarControllerTests
 
             //Act & Assert
             controller.WithCallTo(x => x.Index(barModel))
-                .ShouldRedirectTo("/home");
+                .ShouldRedirectTo("/allbars");
         }
     }
 }

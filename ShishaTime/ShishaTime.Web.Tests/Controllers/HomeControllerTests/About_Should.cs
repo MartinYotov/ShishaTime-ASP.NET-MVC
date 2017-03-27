@@ -27,7 +27,7 @@ namespace ShishaTime.Web.Tests.Controllers.HomeControllerTests
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("Welcome to ShishaTime!", result.ViewBag.Message);
         }
     }
 }

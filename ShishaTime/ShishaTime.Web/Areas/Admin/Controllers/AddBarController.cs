@@ -105,7 +105,7 @@ namespace ShishaTime.Web.Areas.Admin.Controllers
 
             this.barsService.AddBar(bar);
 
-            return this.Redirect("/home");           
+            return this.Redirect("/allbars");           
         }
 
         private IEnumerable<Region> GetRegions()
