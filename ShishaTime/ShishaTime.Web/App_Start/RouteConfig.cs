@@ -9,7 +9,7 @@ namespace ShishaTime.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.LowercaseUrls = true;
+            //routes.LowercaseUrls = true;
 
             routes.MapRoute(
               name: "Rate",
@@ -32,7 +32,7 @@ namespace ShishaTime.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", area = "", id = UrlParameter.Optional }
             );
         }
     }

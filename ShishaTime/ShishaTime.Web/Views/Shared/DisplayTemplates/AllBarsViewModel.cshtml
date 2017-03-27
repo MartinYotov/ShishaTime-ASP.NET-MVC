@@ -1,11 +1,12 @@
-﻿@model BarShortViewModel
+﻿@model AllBarsViewModel
 
-<div class="home-bar modal-dialog">
+<div class="home-bar all-bars modal-dialog">
     <div class="modal-content">
         <div class="modal-body">
             <div id="home-page-rating" class="div-inline">
                 <h3>@Html.ActionLink(@Model.Name, null, "Bar", new { id = Model.Id }, null)</h3>
                 <input id="user-rating" class="rating rating-loading" value="@Model.RatingValue" data-min="0" data-max="5" data-step="0.1" data-readonly="true" data-size="sm">
+                <p>Region: @Model.Region</p>
             </div>
             <div class="div-inline right">
                 @if (Model.Image != null)
@@ -16,7 +17,4 @@
         </div>
     </div>
 </div>
-
-
-
 

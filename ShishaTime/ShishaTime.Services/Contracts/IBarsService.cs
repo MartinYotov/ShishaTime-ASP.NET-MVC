@@ -10,5 +10,7 @@ namespace ShishaTime.Services.Contracts
         void AddBar(ShishaBar bar);
 
         IEnumerable<ShishaBar> GetTopRated(int count);
+
+        IEnumerable<ShishaBar> GetBarsWithPaging(out int count, int page, int pageSize);
     }
 }

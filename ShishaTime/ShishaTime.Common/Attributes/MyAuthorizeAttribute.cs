@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace ShishaTime.Common.Attributes
 {
@@ -9,7 +10,7 @@ namespace ShishaTime.Common.Attributes
         {
             if (filterContext.HttpContext.User.Identity.IsAuthenticated)
             {
-                filterContext.Result = new HttpStatusCodeResult(401);
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "ErrorPages", action = "Page401", area = "" }));
             }
             else
             {

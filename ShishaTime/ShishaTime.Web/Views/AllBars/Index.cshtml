@@ -1,0 +1,14 @@
+﻿@model IPagedList<AllBarsViewModel>
+
+<h2>Take a look at our shisha bars</h2>
+
+<div class="container">
+    @Html.DisplayFor(m => Model)
+</div>
+
+<div>
+    <div class="center">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }))
+    </div>
+</div>
+

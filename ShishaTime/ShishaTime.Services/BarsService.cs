@@ -39,5 +39,16 @@ namespace ShishaTime.Services
                 .Take(count)
                 .ToList();
         }
+
+        public IEnumerable<ShishaBar> GetBarsWithPaging(out int count, int page, int pageSize)
+        {
+            count = this.data.Bars.All.Count();
+
+            return this.data.Bars.All
+                .OrderBy(b => b.Name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+        }
     }
 }
